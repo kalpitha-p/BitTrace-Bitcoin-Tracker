@@ -1,0 +1,416 @@
+body {
+    background-color: #0f172a;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 80px;
+}
+
+h1 {
+    color: #f7931a;
+    font-size: 48px;
+}
+
+p {
+    color: #cbd5e1;
+    font-size: 20px;
+}
+/* Professional transaction search card */
+.search-box {
+    display: flex;
+    gap: 12px;
+    max-width: 700px;
+    margin: 35px auto;
+    padding: 12px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 16px;
+    background: #0f172a;
+    color: white;
+    border: 1px solid #475569;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.search-box input:focus {
+    border-color: #f7931a;
+    box-shadow: 0 0 0 2px #f7931a33;
+}
+
+.search-box button {
+    padding: 15px 20px;
+    background: #f7931a;
+    color: #0f172a;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.search-box button:hover {
+    background: #ffb347;
+}
+
+.search-box button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+@media (max-width: 600px) {
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box input,
+    .search-box button {
+        width: 100%;
+    }
+}
+/* Transaction results section */
+#results {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+#results h2 {
+    color: #f7931a;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#results p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #e2e8f0;
+}
+
+#results strong {
+    color: #94a3b8;
+}
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+    body {
+        padding: 40px 15px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    body > p {
+        font-size: 16px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .search-box input,
+    .search-box button {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    #results {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 18px;
+    }
+}
+.status-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.confirmed {
+    background-color: #14532d;
+    color: #86efac;
+}
+
+.unconfirmed {
+    background-color: #78350f;
+    color: #fcd34d;
+}
+/* Professional header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto 70px;
+    padding: 20px;
+    border-bottom: 1px solid #334155;
+}
+
+.logo {
+    color: #f7931a;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.network-status {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.live-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background-color: #22c55e;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #94a3b8;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* Mobile header adjustments */
+@media (max-width: 600px) {
+    .site-header {
+        margin-bottom: 45px;
+        padding: 15px 5px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .network-status {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+}
+/* How BitTrace works */
+.info-section {
+    max-width: 900px;
+    margin: 70px auto 30px;
+    padding: 20px;
+}
+
+.info-section h2 {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.info-card {
+    padding: 22px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    text-align: left;
+}
+
+.info-icon {
+    font-size: 28px;
+}
+
+.info-card h3 {
+    color: #f7931a;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .info-section {
+        margin-top: 40px;
+        padding: 10px 0;
+    }
+}
+/* Website footer */
+.site-footer {
+    margin-top: 70px;
+    padding: 30px 15px;
+    border-top: 1px solid #334155;
+    text-align: center;
+}
+
+.site-footer h3 {
+    color: #f7931a;
+    font-size: 22px;
+}
+
+.site-footer p {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.site-footer .footer-note {
+    color: #64748b;
+    font-size: 12px;
+}
+/* Make transaction links match BitTrace */
+.explorer-link {
+    display: inline-block;
+    color: #f7931a;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.explorer-link:hover {
+    color: #ffb347;
+    text-decoration: underline;
+}
+
+#results {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 24px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    text-align: left;
+    overflow-wrap: anywhere;
+    box-shadow: 0 8px 25px #00000020;
+}
+
+#results h2 {
+    color: #f7931a;
+    margin-top: 0;
+}
+/* Network overview */
+.network-overview {
+    max-width: 650px;
+    margin: 45px auto;
+    text-align: left;
+}
+
+.network-overview h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.network-card {
+    padding: 24px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 14px;
+}
+
+.network-card p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.network-card h3 {
+    color: #f7931a;
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.network-card span {
+    color: #64748b;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    .network-overview {
+        width: 100%;
+    }
+}
+/* Recent searches */
+.history-section {
+    max-width: 650px;
+    margin: 45px auto;
+    text-align: left;
+}
+
+.history-section h2 {
+    color: white;
+    font-size: 24px;
+}
+
+.history-description {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 12px;
+    padding: 15px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 10px;
+}
+
+.history-id {
+    color: #cbd5e1;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.history-item button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 7px;
+    background: #f7931a;
+    color: #0f172a;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .history-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

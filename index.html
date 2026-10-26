@@ -1,0 +1,116 @@
+<!DOCTYPE  html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1.0">
+        <title>BitTrace-Bitcoin Tracker</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="site-header">
+
+    <a href="#" class="logo">₿ BitTrace</a>
+
+    <span class="network-status">
+
+        <span class="live-dot"></span>
+
+        Bitcoin Network
+
+    </span>
+
+</header>
+
+<section class="hero">
+
+    <h1>Explore the Bitcoin Blockchain</h1>
+
+    <p>Track transactions. Verify details. Explore the blockchain.</p>
+    </section>
+        <div class="Search-box">
+            <input
+            type="text"
+            id="transactionId"
+            placeholder="Enter Bitcoin Transaction ID....">
+            <button>Track Transcation</button>         
+        </div>
+        <div id="results"></div>
+        <section class="history-section">
+
+    <h2>Recent Searches</h2>
+
+    <p class="history-description">
+
+        Your recent transaction lookups appear here.
+
+    </p>
+
+    <div id="searchHistory">
+
+        <p>No recent searches yet.</p>
+        </div>
+        </section>
+        <section class="network-overview">
+    <h2>Bitcoin Network Overview</h2>
+
+    <div class="network-card">
+        <p>Latest Block Height</p>
+        <h3 id="blockHeight">Loading...</h3>
+        <span>Latest block reported by the Bitcoin API</span>
+    </div>
+</section>
+        <section class="info-section">
+
+    <h2>How BitTrace Works</h2>
+
+    <div class="info-cards">
+
+        <div class="info-card">
+
+            <span class="info-icon">🔎</span>
+
+            <h3>Search</h3>
+
+            <p>Enter a Bitcoin transaction ID to begin.</p>
+
+        </div>
+
+        <div class="info-card">
+
+            <span class="info-icon">🔗</span>
+
+            <h3>Verify</h3>
+
+            <p>Retrieve transaction information from the blockchain API.</p>
+
+        </div>
+
+        <div class="info-card">
+
+            <span class="info-icon">📊</span>
+
+            <h3>Explore</h3>
+
+            <p>Check confirmation status, block height, and transaction fee.</p>
+            </div>
+
+    </div>
+
+</section>
+<footer class="site-footer">
+
+    <h3>₿ BitTrace</h3>
+
+    <p>A simple way to explore Bitcoin transactions.</p>
+
+    <p class="footer-note">
+
+        Powered by the Blockstream API.
+
+    </p>
+
+</footer>
+        <script src="script.js"></script>
+    </body>
+</html>
