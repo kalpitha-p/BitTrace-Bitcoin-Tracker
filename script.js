@@ -137,4 +137,39 @@ function renderHistory() {
     });
 }
 
+// Make the Search card functional
+document.getElementById("searchCard").addEventListener("click", function () {
+    const input = document.getElementById("transactionId");
+    input.scrollIntoView({ behavior: "smooth", block: "center" });
+    input.focus();
+});
+
+// Make the Verify card functional
+document.getElementById("verifyCard").addEventListener("click", function () {
+    const input = document.getElementById("transactionId");
+    const transactionId = input.value.trim();
+
+    if (transactionId === "") {
+        input.focus();
+        alert("Please enter a Bitcoin transaction ID first!");
+    } else {
+        document.querySelector("button").click();
+    }
+});
+
+// Make the Explore card functional
+document.getElementById("exploreCard").addEventListener("click", function () {
+    const input = document.getElementById("transactionId");
+    const transactionId = input.value.trim();
+
+    if (transactionId !== "") {
+        window.open(
+            "https://blockstream.info/tx/" + encodeURIComponent(transactionId),
+            "_blank"
+        );
+    } else {
+        window.open("https://blockstream.info/", "_blank");
+    }
+});
+
 renderHistory();
